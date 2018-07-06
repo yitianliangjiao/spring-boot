@@ -18,10 +18,10 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @ContextConfiguration(classes=ComponentConfig.class)
 public class Test {
 	@Autowired
-	private Sgtpeppers sp;
+	private CDPlayer cd;
 	@org.junit.Test
 	public void test() {
-		assertNotNull(sp);
+		assertNotNull(cd);
 	}
 	
 }

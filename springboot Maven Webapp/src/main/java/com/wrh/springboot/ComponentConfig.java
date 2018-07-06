@@ -1,5 +1,6 @@
 package com.wrh.springboot;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
@@ -12,5 +13,9 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @ComponentScan
 public class ComponentConfig {
-
+	
+	@Bean
+	public CDPlayer getCdPlayer(Sgtpeppers sp){
+		return new CDPlayer(sp);
+	}
 }
