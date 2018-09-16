@@ -3,8 +3,6 @@ package com.wrh.springboot;
 import static org.junit.Assert.*;
 
 import org.junit.runner.RunWith;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.test.context.ContextConfiguration;
@@ -16,12 +14,15 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  * @author:            王荣豪
  * @date:            2018年7月5日        下午10:47:02
  */
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(classes=ComponentConfig.class)
 public class Test {
-	final Logger logger = LoggerFactory.getLogger(Test.class);
+	@Autowired
+	private CDPlayer cd;
 	@org.junit.Test
 	public void test() {
 		assertNotNull(cd);
-		System.out.println("测试git");
+		System.out.println("测试git-pull request");
 	}
 	
 }
