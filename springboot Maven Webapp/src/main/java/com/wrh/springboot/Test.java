@@ -22,6 +22,7 @@ public class Test {
 	@org.junit.Test
 	public void test() {
 		assertNotNull(cd);
+		System.out.println("测试git");
 	}
 	
 }
