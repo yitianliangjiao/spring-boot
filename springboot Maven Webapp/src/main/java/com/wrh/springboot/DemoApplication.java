@@ -28,6 +28,7 @@ public class DemoApplication {
 	}
 	 @RequestMapping("/")
 	    String home() {
+		 System.out.println("555");
 	        return "Hello World!";
 	    }
 }
