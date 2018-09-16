@@ -21,6 +21,7 @@ public class Test {
 	@org.junit.Test
 	public void test() {
 		logger.info("111");
+		System.out.println("测试git-master");
 	}
 	
 }
