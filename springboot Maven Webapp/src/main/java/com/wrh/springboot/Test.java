@@ -22,11 +22,9 @@ public class Test {
 	@org.junit.Test
 	public void test() {
 		assertNotNull(cd);
-		System.out.println("测试git-pull request");
-		System.out.println("测试git-pull request");
-		System.out.println("测试git-pull request");
-		System.out.println("测试git-pull request");
-
+		System.out.println("测试git-pull request11111");
+		System.out.println("测试git-pull request2222");
+		System.out.println("测试git-pull request3333");
 	}
 	
 }
