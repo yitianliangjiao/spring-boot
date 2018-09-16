@@ -20,8 +20,8 @@ public class Test {
 	final Logger logger = LoggerFactory.getLogger(Test.class);
 	@org.junit.Test
 	public void test() {
-		logger.info("111");
-		System.out.println("测试git-master");
+		assertNotNull(cd);
+		System.out.println("测试git");
 	}
 	
 }
