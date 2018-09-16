@@ -23,6 +23,7 @@ public class Test {
 	public void test() {
 		assertNotNull(cd);
 		System.out.println("测试git-pull request");
+		System.out.println("测试git-pull request");
 	}
 	
 }
