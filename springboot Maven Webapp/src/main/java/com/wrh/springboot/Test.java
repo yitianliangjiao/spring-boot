@@ -26,6 +26,7 @@ public class Test {
 		System.out.println("测试git-pull request6666");
 		
 		System.out.println("测试git-pull request777");
+		System.out.println("测试git-pull request888");
 	}
 	
 }
