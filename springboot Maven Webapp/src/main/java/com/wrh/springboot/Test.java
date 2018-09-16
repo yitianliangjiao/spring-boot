@@ -24,8 +24,11 @@ public class Test {
 		assertNotNull(cd);
 		System.out.println("测试git-pull request5555");
 		System.out.println("测试git-pull request6666");
+<<<<<<< Upstream, based on origin/dev
 		
 		System.out.println("测试git-pull request777");
+=======
+>>>>>>> c345329 测试git追加提交 (#3)
 	}
 	
 }
