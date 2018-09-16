@@ -22,7 +22,8 @@ public class Test {
 	@org.junit.Test
 	public void test() {
 		assertNotNull(cd);
-		System.out.println("测试git-pull request4444");
+		System.out.println("测试git-pull request5555");
+		System.out.println("测试git-pull request6666");
 	}
 	
 }
