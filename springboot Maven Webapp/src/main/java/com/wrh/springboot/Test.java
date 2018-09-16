@@ -24,6 +24,8 @@ public class Test {
 		assertNotNull(cd);
 		System.out.println("测试git-pull request5555");
 		System.out.println("测试git-pull request6666");
+		
+		System.out.println("测试git-pull request777");
 	}
 	
 }
