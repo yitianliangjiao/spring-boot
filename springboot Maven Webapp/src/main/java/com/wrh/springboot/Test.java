@@ -18,15 +18,13 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @ContextConfiguration(classes=ComponentConfig.class)
 public class Test {
 	@Autowired
-	private CDPlayer cd;
+	private DemoA demoa;
+	@Autowired
+	private DemoB demob;
 	@org.junit.Test
 	public void test() {
-		assertNotNull(cd);
-		System.out.println("测试git-pull request5555");
-		System.out.println("测试git-pull request6666");
-
-		System.out.println("测试git-pull request777");
-		System.out.println("测试git-pull request888");
+		assertNotNull(demob);
+		assertNotNull(demoa);
 	}
 	
 }

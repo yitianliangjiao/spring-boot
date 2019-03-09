@@ -14,8 +14,5 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan
 public class ComponentConfig {
 	
-	@Bean
-	public CDPlayer getCdPlayer(Sgtpeppers sp){
-		return new CDPlayer(sp);
-	}
+	
 }
