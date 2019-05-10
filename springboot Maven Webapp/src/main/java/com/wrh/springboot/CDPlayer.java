@@ -1,8 +1,6 @@
 package com.wrh.springboot;
 
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Controller;
 
 /**
  * @ClassName:       CDPlayer
@@ -16,7 +14,7 @@ public CDPlayer(Sgtpeppers sp) {
 	System.out.println(sp.toString());
 }
 public CDPlayer(){
-	System.out.println("1115555666");
+	System.out.println("kaihuiyanshi1");
 
 	System.out.println("222");
 	System.out.println("222");
