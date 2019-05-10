@@ -16,7 +16,7 @@ public CDPlayer(Sgtpeppers sp) {
 	System.out.println(sp.toString());
 }
 public CDPlayer(){
-	System.out.println("111");
+	System.out.println("111222222222");
 	System.out.println("222");
 	System.out.println("222");
 	System.out.println("222");
