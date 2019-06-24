@@ -2,6 +2,8 @@ package com.wrh.springboot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -11,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @author:            王荣豪
  * @date:            2018年7月5日        下午10:34:41
  */
-@RestController
+@Controller
 @SpringBootApplication
 public class DemoApplication {
 
@@ -26,9 +28,9 @@ public class DemoApplication {
 		// TODO Auto-generated method stub
 		SpringApplication.run(DemoApplication.class, args);
 	}
-	 @RequestMapping("/")
-	    String home() {
+	 @RequestMapping("/websocket")
+	    String home(String bdcode) {
 		 System.out.println("555");
-	        return "Hello World!";
+	        return "websocket";
 	    }
 }
