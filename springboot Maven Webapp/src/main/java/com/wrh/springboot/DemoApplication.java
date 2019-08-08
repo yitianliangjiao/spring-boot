@@ -1,7 +1,10 @@
 package com.wrh.springboot;
 
+import com.wrh.springboot.redis.RedisUtil;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,8 +18,11 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @Controller
 @SpringBootApplication
+@ComponentScan(basePackages = {"com.wrh.springboot.*"})
 public class DemoApplication {
 
+	@Autowired
+	RedisUtil redisUtil;
 	/**
 	 * @Title:             main
 	 * @Description:     TODO
@@ -33,4 +39,17 @@ public class DemoApplication {
 		 System.out.println("555");
 	        return "websocket";
 	    }
+	@RequestMapping("/setredis")
+		String redis(String key,String value) {
+		redisUtil.set(key,value);
+		System.out.println(key);
+		System.out.println(value);
+		return "websocket";
+	}
+
+	@RequestMapping("/getredis")
+	String redis(String key) {
+		System.out.println(redisUtil.get(key));
+		return "websocket";
+	}
 }

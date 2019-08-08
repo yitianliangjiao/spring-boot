@@ -26,5 +26,5 @@ public class Test {
 		assertNotNull(demob);
 		assertNotNull(demoa);
 	}
-	
+
 }
