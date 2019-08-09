@@ -21,8 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 @ComponentScan(basePackages = {"com.wrh.springboot.*"})
 public class DemoApplication {
 
-	@Autowired
-	RedisUtil redisUtil;
+
 	/**
 	 * @Title:             main
 	 * @Description:     TODO
@@ -33,23 +32,5 @@ public class DemoApplication {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		SpringApplication.run(DemoApplication.class, args);
-	}
-	 @RequestMapping("/websocket")
-	    String home(String bdcode) {
-		 System.out.println("555");
-	        return "websocket";
-	    }
-	@RequestMapping("/setredis")
-		String redis(String key,String value) {
-		redisUtil.set(key,value);
-		System.out.println(key);
-		System.out.println(value);
-		return "websocket";
-	}
-
-	@RequestMapping("/getredis")
-	String redis(String key) {
-		System.out.println(redisUtil.get(key));
-		return "websocket";
 	}
 }

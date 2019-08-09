@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Demo weiBo</title>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js">
+    </script>
+</head>
+<body>
+
+<div>
+    <span>查询词</span>
+    <input type="text" name="checkstr" id="checkstr"/>
+    <button type="button" onclick="add()">添加</button>
+</div>
+<div id="borad">
+</div>
+</body>
+<script>
+   // var int=self.setInterval("getList()",1000);
+   $(function() {
+       getList();
+   })
+    function add(){
+        var name = $("#checkstr").val();
+        var data = {name:name};
+        $.post("/WeiBo/Add",data,function (data) {
+            if(!data)
+            {
+                alert("插入失败");
+            }
+        });
+        getList();
+    }
+   function click(name){
+       var data = {name:name};
+       $.post("/WeiBo/Click",data,function (data) {
+           if(!data)
+           {
+               alert("插入失败");
+           }
+       });
+       getList();
+   }
+    function getList() {
+        var data = {num:10};
+        $.get("/WeiBo/GetLeaderboard",data,function (data) {
+            var thehtml = "<ul>排名</ul>";
+            for (var i = 0; i < data.length; i++) {
+                thehtml += "<li><a  href=\"javascript:click('"+data[i].name+"')\">第"+(i+1)+"名:"+data[i].name+",热度:"+data[i].num+"</a></li>";
+            }
+            $("#borad").html(thehtml);
+        });
+    }
+</script>
+</html>

@@ -11,10 +11,17 @@ public class WebSocketController {
 	
 	@Autowired
 	MyHandler myHandler;
+
+	@RequestMapping("/index")
+	String home(String bdcode) {
+		System.out.println("555");
+		return "websocket";
+	}
 	
 	@RequestMapping("/send")
 	public String SendMsg(String msg,String sessionid){
 		myHandler.sendMessageToUser(new TextMessage(msg.getBytes()),sessionid);
 		return msg;
 	}
+
 }
