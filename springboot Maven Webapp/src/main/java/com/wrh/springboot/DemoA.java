@@ -28,8 +28,11 @@ import org.springframework.stereotype.Component;
 public class DemoA {
 	private Integer id;  
     
-    private DemoB demob;  
-    
+    private DemoB demob;
+
+	public DemoA(){
+
+	}
     
     public DemoA(DemoB demob){
     	
